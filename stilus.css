@@ -37,10 +37,71 @@ header>h1{
 }
 nav{
     grid-area: n;
+    font-weight: bold;
+}
+nav>ul{
+    display: block;
+}
+nav>ul>li{
+    list-style-type: none;
+    border: 1px solid white;
+    border-radius: 10%;
+    padding: 5px;
+    margin: 0 10px 0 10px;
+}
+nav>ul>li:hover{
+    background-color: lightgray;
+}
+nav>ul>li>a{
+    color:red;
+    text-decoration: none;
+}
+nav>ul>li>a:hover{
+    color: white;
 }
 article{
     grid-area: a;
+    background-color: black;
+    text-align: justify;
+    font-size: 10px;
+}
+article>h2{
+    font-size: 15px;
+}
+article>img{
+    float: left;
+    width: 250px;
+    margin: 20px;
+}
+article>ol{
+    list-style-type: square;
+    margin: 20px;
 }
 footer{
     grid-area: f;
+    text-align: center;
+    padding: 5px;
+}
+table{
+    border: 1px solid white;
+}
+td, th{
+    border: 1px solid white;
+    margin: 0;
+}
+.masodik{
+    background-color: gray;
+}
+
+@media screen and (max-width:700px){
+    main{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "h"
+        "n"
+        "a"
+        "f";
+    }
 }
